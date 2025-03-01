@@ -46,34 +46,87 @@
             Question-1: What are the different ways to select an element in the
             DOM?
           </h2>
-          <p class="px-6 py-4 text-base opacity-70">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            nihil. Unde dolore quibusdam at placeat mollitia tempore laboriosam
-            iure aspernatur. Rerum totam architecto quisquam laudantium at
-            veniam dolorum amet maiores!
-          </p>
+          <div class="px-6 py-4">
+            <p class="text-base opacity-70">
+              ডকুমেন্ট অবজেক্ট মডেল (DOM) এ কয়েকটি পদ্ধতিতে html ইলিমেন্টকে
+              সিলেক্ট করা যায়।
+            </p>
+            <ul class="list-disc px-6 py-4">
+              <li>
+                <span class="font-bold">getElementById()</span> - একটিমাত্র
+                ইলিমেন্ট রিটার্ন করে।
+              </li>
+              <li>
+                <span class="font-bold">getElementsByClassName()</span> -
+                HTMLCollection রিটার্ন করে।
+              </li>
+              <li>
+                <span class="font-bold">querySelector()</span> - CSS সিলেক্টরের
+                উপর ভিত্তি করে first matching ইলিমেন্টকে রিটার্ন করে।
+              </li>
+              <li>
+                <span class="font-bold">querySelectorAll()</span> - NodeList
+                রিটার্ন করে।
+              </li>
+              <li>
+                <span class="font-bold">getElementsByTagName()</span> -
+                HTMLCollection রিটার্ন করে।
+              </li>
+            </ul>
+            <p class="text-base opacity-70">
+              উপর্যুক্ত ৫ টি পদ্ধতি বেশী ব্যবহার করা হয়। এছাড়াও আরও কিছু পদ্ধতি
+              রয়েছে।
+            </p>
+          </div>
         </div>
         <div class="bg-white">
           <h2 class="font-bold border-b border-dashed px-6 py-4 text-xl">
             Question-2: What is the difference between innerHTML, innerText, and
             textContent ?
           </h2>
-          <p class="px-6 py-4 text-base opacity-70">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            nihil. Unde dolore quibusdam at placeat mollitia tempore laboriosam
-            iure aspernatur. Rerum totam architecto quisquam laudantium at
-            veniam dolorum amet maiores!
-          </p>
+          <div class="px-6 py-4">
+            <p class="text-base opacity-70">
+              innerHTML, innerText এবং textContent এর মধ্যে পার্থক্য বিদ্যমান।
+              নিচে এদের বেশিষ্ট্য তুলে ধরা হলো। এ থেকে তাদের মধ্যে পার্থক্য বোঝা
+              যাবে।
+            </p>
+            <ul class="list-disc px-6 py-4">
+              <li>
+                <span class="font-bold">innerHTML</span> - html ট্যাগ, টেক্সট
+                কন্টেন্ট সহ সব রিটার্ন করে। মার্কাপ যেভাবে থাকে তাই রিটার্ন করে।
+                ক্লাসনেম, আইডি, এট্রিবিউট যাই থাকুক না কেন সব সহ রিটার্ন করে।
+              </li>
+              <li>
+                <span class="font-bold">innerText</span> - শুধুমাত্র টেক্সট গুলো
+                রিটার্ন করে। html ট্যাগ , ক্লাসনেম ইত্যাদি বাদ দিয়ে শুধুমাত্র
+                টেক্সট গুলো রিটার্ন করে। এক্ষেত্রে উল্লেখ্য শুধুমাত্র অই সকল
+                টেক্সট রিটার্ন করে যেগুলো স্ক্রিনে দেখা যায়। CSS দিয়ে কোনো
+                টেক্সট যদি হাইড করা হয় তবে তা রিটার্ন করবে না।
+              </li>
+              <li>
+                <span class="font-bold">textContent</span> - অনেকটা innerText এর
+                মতোই সব কিছু। শুধু পার্থক্য হলো textContent, CSS দিয়ে কোনো
+                টেক্সট যদি হাইড করা হয় সেটিও রিটার্ন করে। এক কথায়, html ট্যাগ ,
+                ক্লাসনেম ইত্যাদি বাদ দিয়ে মার্কাপে টেক্সট রিলেটেড যাই থাকুক না
+                কেন সেটা হোক ভিজিবাল অথবা css দিয়ে হাইড করা সব রিটার্ন করে।
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="bg-white">
           <h2 class="font-bold border-b border-dashed px-6 py-4 text-xl">
             Question-3: What is event delegation in the DOM?
           </h2>
           <p class="px-6 py-4 text-base opacity-70">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            nihil. Unde dolore quibusdam at placeat mollitia tempore laboriosam
-            iure aspernatur. Rerum totam architecto quisquam laudantium at
-            veniam dolorum amet maiores!
+            এমন একটা সিনারিও চিন্তা করা যাক, একটা প্যারেন্টের মধ্যে অনেক গুলো
+            চাইল্ড আছে। এখন প্রত্যেক্টি চাইল্ডে আলাদা আলদা ইভেন্ট লিসেনার যোগ না
+            করে শুধু প্যারেন্টে একটিমাত্র ইভেন্ট লিসেনার যোগ করে সেখান থেকে
+            চাইল্ড ইলিমেন্টগুলোর ইভেন্ট হ্যান্ডেল করা যায়। এটাই হলো event
+            delegation । এক্ষেত্রে যখন কোনো চাইল্ড ইলিমেন্টএ ইভেন্ট ঘটে তখন তা
+            বাব্লিং হয়ে প্যারেন্টে যায় এবং প্যারেন্টে ইভেন্ট লিসেনার টার্গেটের
+            উপর ভিত্তি করে ইভেন্ট হ্যান্ডেল করে।সুবিধা হলো, একাধিক ইভেন্ট
+            লিসেনার যোগ না করে একটা দিয়েই কাজ হচ্ছে এবং ডায়নামিকভাবেও যদি নতুন
+            চাইল্ড/ইলিমেন্ট এড হয় তবেও সুন্দর ভাবে ইভেন্ট হ্যান্ডেল হবে।
           </p>
         </div>
         <div class="bg-white">
@@ -81,10 +134,16 @@
             Question-4: What is event bubbling in the DOM?
           </h2>
           <p class="px-6 py-4 text-base opacity-70">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            nihil. Unde dolore quibusdam at placeat mollitia tempore laboriosam
-            iure aspernatur. Rerum totam architecto quisquam laudantium at
-            veniam dolorum amet maiores!
+            যখন কোনো ইলিমেন্টএ ইভেন্ট ঘটে তখন সেটি ট্রান্সমিট হয়ে তার প্যারেন্টে
+            যায়, প্যারেন্ট থেকে এন্সেস্টর অর্থাৎ DOM ট্রি এর নিচ থেকে উপরের দিকে
+            যায় যতক্ষ্ন পর্যন্ত না root ইলিমেন্টে যাচ্ছে অথবা কাস্টমভাবে অফ করা
+            হচ্ছে। এটাই event bubbling । এটা ডিফল্ট অর্ডার। চাইলে এই অর্ডার
+            চেঞ্জ করা যায়। উদাহরণস্বরূপঃ div > ul > li । এক্ষেত্রে আমারা
+            তিনটাতেই ক্লিক ইভেন্ট এড করলাম। এখন li তে ক্লিক করলে li এর ইভেন্ট
+            ফায়ার হওয়ার সাথে ul এবং div এরও ইভেন্ট ফায়ার হয়ে যাবে। লক্ষ্যনীয় li
+            এ ক্লিক করলে ইভেন্ট ট্রান্সমিট হয়ে তার প্যারেন্ট ul এ যাচ্ছে এবং ul
+            এর ইভেন্ট ফায়ার হচ্ছে। আবার এরপর ul এর প্যারেন্ট div এ যাচ্ছে এবং
+            সেখানে div এর ইভেন্ট ফায়ার হচ্ছে। এটাই event bubbling।
           </p>
         </div>
         <div class="bg-white">
@@ -92,12 +151,38 @@
             Question-5: How do you create, add, and remove elements using
             JavaScript?
           </h2>
-          <p class="px-6 py-4 text-base opacity-70">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            nihil. Unde dolore quibusdam at placeat mollitia tempore laboriosam
-            iure aspernatur. Rerum totam architecto quisquam laudantium at
-            veniam dolorum amet maiores!
-          </p>
+          <div class="px-6 py-4">
+            <p class="text-base opacity-70">
+              যেভাবে জাভাস্ক্রিপ্ট দিয়ে এলিমেন্ট create, add এবং remove করা যায়
+              তা নিচে দেখানো হলো।
+            </p>
+            <ul class="list-disc px-6 py-4">
+              <li>
+                <span class="font-bold">Creating an Element</span> -
+                document.createElement("tagname")
+              </li>
+              <li>
+                <span class="font-bold">Adding an Element</span> -
+                <ul class="list-disc px-6">
+                  <li>appendChild()</li>
+                  <li>insertBefore()</li>
+                  <li>innerHTML</li>
+                </ul>
+                <p class="text-base opacity-70">
+                  উপর্যুক্ত ৩ টি পদ্ধতি বেশী ব্যবহার করা হয়। এছাড়াও আরও কিছু
+                  এলিমেন্ট যোগ করার পদ্ধতি রয়েছে।
+                </p>
+              </li>
+              <li>
+                <span class="font-bold">Removing an Element</span> -
+                <ul class="list-disc px-6">
+                  <li>removeChild()</li>
+                  <li>remove()</li>
+                  <li>innerHTML=""</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </main>
