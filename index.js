@@ -70,19 +70,12 @@ let navCount = document.getElementById("nav-count").innerText;
 let convertedNavCount = parseInt(navCount);
 let activityContainer = document.getElementById("activityContainer");
 let completeButtons = document.querySelectorAll(".completeBtn");
-//get time
-let hours = d.getHours();
-let minutes = d.getMinutes();
-let seconds = d.getSeconds();
-// console.log(`Hours: ${hours} Minutes: ${minutes} Seconds: ${seconds}`);
 
-// let currentTime = formattedTime.split(":");
-// console.log(formattedTime);
-// console.log(currentTime);
 for (let button of completeButtons) {
   button.addEventListener("click", function (e) {
     let parent = e.target.parentElement.parentElement;
     let title = parent.children[1].innerText;
+    //get time
     let dates = new Date();
     let formatter = new Intl.DateTimeFormat("en-US", {
       hour: "2-digit",
